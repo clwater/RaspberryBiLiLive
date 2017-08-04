@@ -5,9 +5,9 @@ def pushFile(url):
     a,b = commands.getstatusoutput('cd /media/pi/smp/xz/file')
     # print a
 
-    import Info
-    streamname = Info.streamname
-    key = Info.key
+    a, b = commands.getstatusoutput('pwd')
+    print b
+
 
     streamname = ''
     key = ''

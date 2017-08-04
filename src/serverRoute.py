@@ -8,8 +8,9 @@ url = '0.0.0.0'
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        urlp = Info.ip + ':10002'
+        urlp = 'http://' + Info.ip + ':10002'
         self.redirect(urlp)
+
 
 class MainHandlerChange(tornado.web.RequestHandler):
     def get(self):
@@ -33,3 +34,4 @@ def runServer():
     print("run in %s:%s"%(localIP,port))
     tornado.ioloop.IOLoop.instance().start()
 
+runServer()

@@ -16,9 +16,11 @@ class MainHandlerChange(tornado.web.RequestHandler):
         streamname  = self.get_argument("streamname", None)
         key  = self.get_argument("key", None)
 
-        import Info
-        Info.streamname = streamname
-        Info.key = key
+
+        with open('streamname', 'w') as f:
+            f.write(streamname)
+        with open('key', 'w') as f:
+            f.write(key)
 
         self.write('streamname =' + streamname + ' key = ' + key)
 

@@ -3,7 +3,7 @@ from os import listdir
 from os.path import isfile, join
 
 def scan():
-    url = '/Users/yszsyf/Desktop'
+    url = '/media/pi/smp/xz/file'
 
 
     onlyfiles = [f for f in listdir(url) if isfile(join(url, f))]

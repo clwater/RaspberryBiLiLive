@@ -4,24 +4,31 @@ import tornado.ioloop
 import tornado.web
 import Info
 
-url = '0.0.0.0'
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        urlp = 'http://' + Info.ip + ':10002'
+        ip = ''
+        with open('ip' , 'r') as f:
+            ip = f.read()
+
+        print ip
+        urlp = 'http://' + ip + ':10002'
+
         print urlp
+
         self.redirect(urlp)
 
 
 class MainHandlerChange(tornado.web.RequestHandler):
     def get(self):
         ips = self.get_argument("ips", None)
-        Info.ip = ips
+        with open('ip', 'w') as f:
+            f.write(ips)
         self.write('keyi')
 
 
 application = tornado.web.Application([
-    (r"/index", MainHandler),
+    (r"/", MainHandler),
     (r"/change", MainHandlerChange),
 
 ])

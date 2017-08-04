@@ -38,7 +38,7 @@ application = tornado.web.Application([
 
 
 def runServer():
-    port = 8100
+    port = 7701
     application.listen(port)
 
     localIP = socket.gethostbyname(socket.gethostname())

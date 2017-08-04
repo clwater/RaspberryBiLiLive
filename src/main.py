@@ -21,7 +21,9 @@ def pushIp():
         else:
             print 'ip != _ip'
             _ip = ip
-            rep = requests.get('23.83.255.85:11000/change?ips=' + _ip)
+            _url = 'http://23.83.255.85:11000/change?ips=' + ip
+            print _url
+            rep = requests.get(_url)
 
         threading._sleep(60 * 10)
 
@@ -29,7 +31,7 @@ def pushIp():
 
 def main():
 
-    thread_getInfoDate = threading.Thread(target=pushIp, name='getInfoDate')
+    thread_getInfoDate = threading.Thread(target=pushIp, name='PushIp')
     thread_startServer = threading.Thread(target=startServer, name='startServer')
 
     thread_getInfoDate.start()
@@ -38,6 +40,6 @@ def main():
     thread_getInfoDate.join()
     thread_startServer.join()
 
-# main()
+main()
 
-pushIp()
+# pushIp()

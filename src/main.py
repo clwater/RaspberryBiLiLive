@@ -14,6 +14,9 @@ def pushIp():
     _ip = str(_ip)
     while True:
         ip = get_host_ip()
+        if ip == None:
+            ip = _ip
+
         ip = str(ip)
 
         if ip == _ip:

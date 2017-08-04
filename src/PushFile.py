@@ -14,5 +14,5 @@ def pushFile(url):
 
 
     print url
-    # a,b = commands.getstatusoutput(url)
+    a,b = commands.getstatusoutput(url)
     # print b

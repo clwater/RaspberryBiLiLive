@@ -9,6 +9,7 @@ url = '0.0.0.0'
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         urlp = 'http://' + Info.ip + ':10002'
+        print urlp
         self.redirect(urlp)
 
 
@@ -20,7 +21,7 @@ class MainHandlerChange(tornado.web.RequestHandler):
 
 
 application = tornado.web.Application([
-    (r"/", MainHandler),
+    (r"/index", MainHandler),
     (r"/change", MainHandlerChange),
 
 ])

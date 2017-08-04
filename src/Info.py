@@ -1,0 +1,6 @@
+
+streamname = ''
+key = ''
+
+ip = ''
+

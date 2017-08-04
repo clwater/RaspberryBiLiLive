@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head><title>ErHuoJieJie视频播放</title></head>
+    <body>
+        <h1>当前列表</h1>
+
+        <ul>
+            {% for file in files %}
+
+                <a href="/index?index={{ file }}">{{ file }}</a>
+                <br/>
+            {% end %}
+        </ul>
+    </body>
+</html>

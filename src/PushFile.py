@@ -12,7 +12,7 @@ def pushFile(url):
     # a,b = commands.getstatusoutput('cd /media/pi/smp/xz/file')
     # print a
 
-    # a, b = commands.getstatusoutput('pwd')
+    # a, b = commands.getstatusoutput('kill %1')
     # print b
 
     print 'url: ' + url

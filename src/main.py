@@ -1,5 +1,4 @@
-
-
+import commands
 import threading
 from server import runServer
 from Utils import get_host_ip
@@ -7,6 +6,8 @@ import requests
 
 
 def startServer():
+
+
     runServer()
 
 def pushIp():

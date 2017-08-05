@@ -28,8 +28,9 @@ class MainHandlerIndex(tornado.web.RequestHandler):
     def get(self):
         index = self.get_argument("index", None)
         from PushFile import pushFile
-        pushFile(index)
         self.render('show.html', file=index)
+        pushFile(index)
+
 
 application = tornado.web.Application([
     (r"/", MainHandler),

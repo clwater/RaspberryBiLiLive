@@ -20,6 +20,7 @@ class MainHandlerChange(tornado.web.RequestHandler):
         key  = self.get_argument("key", None)
 
 
+
         with open('streamname', 'w') as f:
             f.write(streamname)
         with open('key', 'w') as f:
@@ -29,9 +30,11 @@ class MainHandlerChange(tornado.web.RequestHandler):
 
 class MainHandlerIndex(tornado.web.RequestHandler):
     def get(self):
-        index = self.get_argument("index", None)
-        from PushFile import pushFile
+        index = self.get_argument("index", '')
         self.render('show.html', file=index)
+
+        print 'index' + index
+        from PushFile import pushFile
         pushFile(index)
 
 

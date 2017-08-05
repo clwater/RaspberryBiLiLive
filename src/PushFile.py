@@ -28,7 +28,7 @@ def pushFile(url):
 
     # print b
     url = 'ffmpeg -re -i "/media/pi/smp/xz/file/' + url + '" -vcodec copy -acodec aac -b:a 192k -f flv "rtmp://txy.live-send.acg.tv/live-txy/?streamname=' + \
-          streamname+ '&key=' + key + '"'
+          streamname+ '&key=' + key + '" &'
 
     url = url.decode('utf-8')
 

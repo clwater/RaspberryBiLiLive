@@ -5,11 +5,11 @@ import commands
 
 
 def pushFile(url):
-    a,b = commands.getstatusoutput('cd /media/pi/smp/xz/file')
+    # a,b = commands.getstatusoutput('cd /media/pi/smp/xz/file')
     # print a
 
-    a, b = commands.getstatusoutput('pwd')
-    print b
+    # a, b = commands.getstatusoutput('pwd')
+    # print b
 
 
     streamname = ''
